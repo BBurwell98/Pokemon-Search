@@ -1,38 +1,148 @@
-.App {
+
+body {
+  background: linear-gradient(to right, #ff5252, #e63d25); /* Gradient background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --grass-color: #78c850;
+  --fire-color: #f08030;
+  --water-color: #6890f0;
+  --normal-color: #A8A77A;
+  --electric-color: #F7D02C;
+  --ice-color: #96D9D6;
+  --fighting-color: #C22E28;
+  --poison-color: #A33EA1;
+  --ground-color: #E2BF65;
+  --flying-color: #A98FF3;
+  --psychic-color: #F95587;
+  --bug-color: #A6B91A;
+  --rock-color: #B6A136;
+  --ghost-color: #735797;
+  --dragon-color: #6F35FC;
+  --dark-color: #705746;
+  --steel-color: #B7B7CE;
+  --fairy-color: #B685AD;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* White background for header */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Dark box shadow for header */
+  border-radius: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-box {
+  width: 60%;
+  max-width: 400px;
+  height: 50px;
+  font-size: 1.2em;
+  padding: 10px;
+  border: 2px solid #fff; /* White border for search box */
+  border-radius: 25px;
+  margin-bottom: 20px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for search box */
+  color: #e63d25; /* Red text color */
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Dark box shadow for search box */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-box:focus {
+  outline: none;
+  border-color: #ffcc80; /* Lighter orange border color when focused */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokemon-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ffffff; /* White border for Pokémon details */
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for Pokémon details */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark box shadow for Pokémon details */
+  color: #e63d25; /* Red text color */
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemon-details img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 5px solid #ffffff; /* White border for Pokémon image */
+  border-radius: 50%; /* Circular border radius for Pokémon image */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dark box shadow for Pokémon image */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemon-details h2 {
+  margin-top: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.pokemon-details p {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pokemon-item {
+  margin-bottom: 10px;
+}
+
+.pokemon-item a {
+  text-decoration: none;
+  color: #fff; /* White text color for Pokémon names */
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e63d25; /* Red background color for Pokémon names */
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Dark box shadow for Pokémon names */
+}
+
+.pokemon-item a:hover {
+  color: #ffcc80; /* Lighter orange hover color for Pokémon names */
+}
+
+.pokemon-item a .pokemon-name {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.pokemon-item a .arrow-icon {
+  font-size: 1.2em;
 }
